@@ -1,0 +1,56 @@
+@use "../../scss" as *;
+
+.containerSearch{
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+    width: 100%;
+}
+
+.searchContainerInput{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput{
+    width: 100%;
+    .inputContainer .flexInput .formInput {
+        background-color: $gray-100;
+        border-radius: 12rem;
+        padding: 18rem 20rem;
+        padding-right: 188rem;
+        border: 0;
+        height: 60rem;
+        @include fnt(18, 24, $weight: 400);
+      
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
+
+.toggleSearch{
+    position: absolute;
+    right: 20rem;
+    z-index: 100;
+
+    .input:checked + .slider{
+        background: $orange-dark-500;
+    }
+}
+
+.btnOrange{
+    padding: 18rem;
+    background-color: $orange-dark-500;
+    border-radius: 12rem;
+    box-shadow: 0rem 1rem 2rem 0rem rgba(16, 24, 40, 0.05);
+    width: 306rem;
+    height: 60rem;
+
+    @include fnt(18, 24, $weight: 500, $font: $fontUI, $color: $white);
+    &:hover{
+        background-color: $orange-500;
+    }
+}
